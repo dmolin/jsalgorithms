@@ -6,7 +6,7 @@ It's going to be a collection of:
 
 - common patterns for solving problems (**src/patterns** folder)
 - common algorithms (**src/algorithms** folder)
-- common data structures (**src/data-stractures** folder)
+- common data structures (**src/data-structures** folder)
 
 The code comes with unit tests and coverage
 
