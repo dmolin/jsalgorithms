@@ -1,0 +1,22 @@
+{
+  "name": "jsalgorithms",
+  "version": "1.0.0",
+  "description": "Exercise in implementing various Algorithms and Patterns in Javascript",
+  "private": true,
+  "scripts": {
+    "build": "babel src -d dist",
+    "test": "jest --coverage",
+    "watch": "jest --coverage --watch",
+    "watch-all": "jest --coverage --watchAll"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/cli": "^7.4.4",
+    "@babel/core": "^7.4.5",
+    "@babel/preset-env": "^7.4.5",
+    "babel-jest": "^24.8.0",
+    "eslint": "^6.0.0",
+    "jest": "^24.8.0"
+  }
+}
