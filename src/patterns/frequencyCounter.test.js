@@ -76,3 +76,31 @@ describe("Applications.countUniqueValues", () => {
     expect(countUniqueValues([1, 2, 3, 4, 4, 4, 7, 7, 12, 12, 13])).toEqual(7);
   });
 });
+
+describe("Application.sameFrequency", () => {
+  const sameFrequency = Applications.sameFrequency;
+  test("should return false if the 2 numbers have no equal frequency", () => {
+    expect(sameFrequency(123, 332)).toBe(false);
+  });
+
+  test("should return true if the 2 numbers have the same frequency", () => {
+    expect(sameFrequency(123, 231)).toBe(true);
+  });
+});
+
+describe("Applications.areThereDuplicates", () => {
+  const areThereDuplicates = Applications.areThereDuplicates;
+
+  test("should return false if no input is provided", () => {
+    expect(areThereDuplicates()).toBe(false);
+  });
+
+  test("should return false if no duplicates are found", () => {
+    expect(areThereDuplicates(1)).toBe(false);
+    expect(areThereDuplicates(1, 2, 3)).toBe(false);
+  });
+
+  test("should return true if duplicates are found", () => {
+    expect(areThereDuplicates(1, 2, 1)).toBe(true);
+  });
+});

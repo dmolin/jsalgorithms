@@ -1,4 +1,4 @@
-import { sumZero, countUniqueValues } from "./multiplePointers";
+import { sumZero, countUniqueValues, areThereDuplicates } from "./multiplePointers";
 
 describe("sumZero", () => {
   test("shoult fail if no array if provided", () => {
@@ -37,5 +37,20 @@ describe("countUniqueValues", () => {
     expect(countUniqueValues([0,1,1,2,2,3,3])).toEqual(4);
     expect(countUniqueValues([-2,-1,-1,-1,0,2,3])).toEqual(5);
     expect(countUniqueValues([1,2,3,4,4,4,7,7,12,12,13])).toEqual(7);
+  });
+});
+
+describe("areThereDuplicates", () => {
+  test("should return false if no input is provided", () => {
+    expect(areThereDuplicates()).toBe(false);
+  });
+
+  test("should return false if no duplicates are found", () => {
+    expect(areThereDuplicates(1)).toBe(false);
+    expect(areThereDuplicates(1, 2, 3)).toBe(false);
+  });
+
+  test("should return true if duplicates are found", () => {
+    expect(areThereDuplicates(1, 2, 1)).toBe(true);
   });
 });
