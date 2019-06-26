@@ -1,4 +1,9 @@
-import { sumZero, countUniqueValues, areThereDuplicates } from "./multiplePointers";
+import {
+  sumZero,
+  countUniqueValues,
+  areThereDuplicates,
+  binaryGap
+} from "./multiplePointers";
 
 describe("sumZero", () => {
   test("shoult fail if no array if provided", () => {
@@ -53,4 +58,25 @@ describe("areThereDuplicates", () => {
   test("should return true if duplicates are found", () => {
     expect(areThereDuplicates(1, 2, 1)).toBe(true);
   });
+});
+
+describe("binaryGap", () => {
+  test("should return 0 if no value is provided", () => {
+    expect(binaryGap()).toEqual(0);
+  });
+
+  test("should return 0 if no number is provided", () => {
+    expect(binaryGap("aaa")).toEqual(0);
+  });
+
+  test("should return the gap if found", () => {
+    expect(binaryGap(20)).toEqual(1);
+    expect(binaryGap(529)).toEqual(4);
+  });
+
+  test("should return ZERO if gap is not found", () => {
+    expect(binaryGap(15)).toEqual(0);
+    expect(binaryGap(32)).toEqual(0);
+  });
+
 });
