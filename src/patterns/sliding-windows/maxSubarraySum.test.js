@@ -1,4 +1,4 @@
-import { maxSubarraySum } from "./slidingWindow";
+import { maxSubarraySum } from "./maxSubarraySum";
 
 describe("slidingWindow", () => {
   test("should return 0 if no array is provided", () => {

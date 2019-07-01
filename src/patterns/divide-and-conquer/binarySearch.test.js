@@ -1,4 +1,4 @@
-import { binarySearch } from "./divideAndConquer";
+import { binarySearch } from "./binarySearch";
 
 describe("binarySearch", () => {
   test("should return -1 if no array is provided", () => {
