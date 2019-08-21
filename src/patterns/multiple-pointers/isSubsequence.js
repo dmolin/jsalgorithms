@@ -1,6 +1,6 @@
 /**
  * @summary Checks whether the input sequence appears as a subsequence of the reference string. 
- *   The chars in the sequence doesn't have to appear consecutively in the refString, but their order need to be respected.
+ *   The chars in the sequence don't have to appear consecutively in the refString, but their order need to be respected.
  * @param {*} sequence
  * @param {*} refString
  */
