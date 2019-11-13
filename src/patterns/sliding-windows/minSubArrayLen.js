@@ -26,4 +26,29 @@ export function minSubArrayLen (arr, threshold) {
   // at each step of the iteration over the array, increase the window and check if the current total is >= than the threshold value
   // if we get to the end of the array, we return 0 (not found) if our sum is < than the threshold.
   // if at any point our sum is > than the threshold, we start reducing the window from the
+  let minLength = 0;
+
+  // build the sliding window
+  let winSize = 1;
+  let start = 0;
+  let sum = arr[0];
+
+  // special case, the first element is already bigger than the threshold
+  if (sum >= threshold) return minLength;
+
+  for(let i = 1; i < arr.length; i++) {
+    sum += arr[i];
+
+    // decrease window size
+    while (sum >= threshold) {
+      if (!minLength || i - start + 1 < minLength) {
+        minLength = i - start + 1;
+      }
+      if (start === i) break;
+      sum = sum - arr[start];
+      start += 1;
+    }
+  }
+
+  return minLength;
 }
