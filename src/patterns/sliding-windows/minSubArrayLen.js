@@ -23,7 +23,8 @@ export function minSubArrayLen (arr, threshold) {
   if (!threshold) return 1;
 
   // build the smallest window (1 slot)
-  // at each step of the iteration over the array, increase the window and check if the current total is >= than the threshold value
+  // at each step of the iteration over the array, increase the window and check
+  // if the current total is >= than the threshold value.
   // if we get to the end of the array, we return 0 (not found) if our sum is < than the threshold.
   // if at any point our sum is > than the threshold, we start reducing the window from the
   let minLength = 0;
